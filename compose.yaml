@@ -1,0 +1,25 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 9000:80
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/html
+      - /var/www/html/vendor
+   
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: rms2
+      MYSQL_USER: rms2
+      MYSQL_PASSWORD: rms2pass
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:

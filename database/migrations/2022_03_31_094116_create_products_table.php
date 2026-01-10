@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
     
     $table->string("category", 50)->nullable();      // regular / special
     $table->unsignedTinyInteger("session")->nullable(); // 0 breakfast, 1 lunch, 2 dinner
+    $table->string("available", 100)->nullable();    // Stock / Out Of Stock
 
     $table->timestamps();
 });

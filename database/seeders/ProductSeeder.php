@@ -23,6 +23,9 @@ class ProductSeeder extends Seeder
                 'description' => $faker->sentence(),  
                 'image' => $faker->imageUrl($width = 640, $height = 480),  
                 'price' => $faker->randomFloat(2, 10, 100),
+                'category' => $faker->randomElement(['regular', 'special']),
+                'session' => $faker->numberBetween(0, 2),
+                'available' => 'Stock',
              ]);  
         }
 

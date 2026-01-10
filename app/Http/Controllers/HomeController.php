@@ -205,19 +205,12 @@ public function reservation_confirm(Request $req)
     {
         $data = [];
         $data['name'] = $req->name;
-        $data['phone'] = $req->phone;
         $data['email'] = $req->email;
         $data['password'] = Hash::make($req->password);
 
         $email = DB::table('users')->where('email', $req->email)->count();
         if ($email > 0) {
             session()->flash('wrong', 'Email already registered !');
-            return back();
-        }
-
-        $phone = DB::table('users')->where('phone', $req->phone)->count();
-        if ($phone > 0) {
-            session()->flash('wrong', 'Phone already registered !');
             return back();
         }
 

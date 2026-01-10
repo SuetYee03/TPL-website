@@ -344,6 +344,7 @@ class ShipmentController extends Controller
 
         }
 
+        /*
         if($req->phone!=Auth::user()->phone)
         {
 
@@ -351,6 +352,7 @@ class ShipmentController extends Controller
             return back();
 
         }
+        */
 
         
         $carts = Cart::all()->where('user_id',Auth::user()->id)->where('product_order','!=','no')->where('invoice_no',$req->invoice);

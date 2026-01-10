@@ -55,7 +55,7 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="/">Home</a></li>
-                            <li class="scroll-to-section"><a href="/#about">About</a></li>
+
                            	
                             <li class="scroll-to-section"><a href="/#menu">Menu</a></li>
                         
@@ -63,8 +63,9 @@
 
                             <li class="scroll-to-section"><a href="/my-order">My Order</a></li>
                           
-                            <li class="scroll-to-section"><a href="/#chefs">Chefs</a></li> 
+ 
                             <li class="scroll-to-section"><a href="/#reservation">Contact Us</a></li>
+                        
                             <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
 
 
@@ -117,24 +118,20 @@
                                     margin-left: -10px; 
                                 }
                             </style>
-                            <li>
                                 @if (Route::has('login'))
-                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
                                         <li style="margin-top:-13px;">
                                             <x-app-layout> </x-app-layout>
                                         </li>
                                     @else
-                                      <li>
-                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                                      </li>
+                                        <li>
+                                          <a href="{{ route('login') }}">Log in</a>
+                                        </li>
                                         @if (Route::has('register'))
-                                            <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a> </li>
+                                            <li><a href="{{ route('register') }}">Register</a> </li>
                                         @endif
                                     @endauth
-                                </div>
                                 @endif
-                            </li>
                         </ul>        
                         
                         <!-- ***** Menu End ***** -->

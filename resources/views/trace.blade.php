@@ -36,11 +36,7 @@
                               </fieldset>
                             </div>
                             
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Phone Number" required="">
-                              </fieldset>
-                            </div>
+                            <!-- Phone number field removed -->
                            
                            
                            

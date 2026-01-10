@@ -40,45 +40,7 @@
     </div>
     <!-- ***** Main Banner Area End ***** -->
 
-    <!-- ***** About Area Starts ***** -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                        @foreach($about_us as $a_us)
-                            <h6>About Us</h6>
-                            <h2>{{  $a_us->title  }}</h2>
-                        </div>
-                        <p>{{  $a_us->description  }}</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/'.$a_us->image1)}}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/'.$a_us->image2)}}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/'.$a_us->image3)}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="right-content">
-                        <div class="thumb">
-                            <a rel="nofollow" href="{{  $a_us->youtube_link    }}" target="_blank"> <i class="fa fa-play"></i></a>
-                            <img src="{{ asset('assets/images/'.$a_us->vd_image)}}" alt="">
 
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** About Area Ends ***** -->
 
      <!-- ***** Menu Area Starts ***** -->
      <section class="section" id="offers">
@@ -693,45 +655,11 @@
     </section>
     <!-- ***** Menu Area Ends ***** -->
 
-    <!-- ***** Chefs Area Starts ***** -->
-    <section class="section" id="chefs">
-        <div class="container">
-          
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4 text-center">
-                    <div class="section-heading">
-                        <h6>Our Chefs</h6>
-                        <h2>We offer the best ingredients for you</h2>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="row">
-                @foreach($chefs as $chef)
-                <div class="col-lg-4">
-                    <div class="chef-item">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <ul class="social-icons">
-                                <li><a href="{{ $chef->facebook_link  }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="{{ $chef->twitter_link  }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="{{ $chef->instragram_link  }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <img src="{{ asset('assets/images/'.$chef->image)}}" alt="Chef #1">
-                        </div>
-                        <div class="down-content">
-                            <h4>{{ $chef->name  }}</h4>
-                            <span>{{ $chef->job_title  }}</span>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-                
-            </div>
-        </div>
-    </section>
-    <!-- ***** Chefs Area Ends ***** -->
 
+
+
+   
+    
     <!-- ***** Reservation Us Area Starts ***** -->
     <section class="section" id="reservation">
         <div class="container">
@@ -845,7 +773,4 @@
         </div>
     </section>
     <!-- ***** Reservation Area Ends ***** -->
-
-   
-    
    @endsection

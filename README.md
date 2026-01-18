@@ -82,6 +82,8 @@ docker compose exec server bash -lc "php artisan key:generate"
 docker compose exec server bash -lc "php artisan migrate"
 docker compose exec server bash -lc "php artisan db:seed"
 ```
+## No product showing 
+docker compose exec server bash -lc "php artisan db:seed --force"
 
 ## Troubleshooting
 

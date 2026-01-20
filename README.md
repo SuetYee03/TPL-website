@@ -75,6 +75,12 @@ Then open http://localhost:8000 in your browser
 
 If using Docker:
 ```bash
+
+docker compose down --remove-orphans
+docker compose build --no-cache
+docker compose up -d
+
+
 docker compose up -d --build
 docker compose exec server bash -lc "composer install"
 docker compose exec server bash -lc "cp .env.example .env"
